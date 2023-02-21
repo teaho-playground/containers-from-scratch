@@ -10,7 +10,7 @@ import (
 )
 
 var cgroups = "/sys/fs/cgroup"
-var custom_cgroup = filepath.Join(cgroups, "liz")
+var custom_cgroup = filepath.Join(cgroups, "teaho")
 
 // go run main.go run <cmd> <args>
 func main() {
@@ -71,7 +71,7 @@ func child() {
 func cg() {
 	os.Mkdir(custom_cgroup, 0755)
 
-	must(os.WriteFile(filepath.Join(custom_cgroup, "pids.max"), []byte("5"), 0644))
+	must(os.WriteFile(filepath.Join(custom_cgroup, "pids.max"), []byte("20"), 0644))
 	must(os.WriteFile(filepath.Join(custom_cgroup, "cgroup.procs"), []byte(strconv.Itoa(os.Getpid())), 0644))
 }
 
