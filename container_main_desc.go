@@ -1,3 +1,7 @@
+/*
+*
+完整范例版注释版
+*/
 package main
 
 import (
