@@ -10,7 +10,7 @@ import (
 	"syscall"
 )
 
-// go run main.go run <cmd> <args>
+// go run mainTest2.go run <cmd> <args>
 func main() {
 	switch os.Args[1] {
 	case "run":

@@ -1,4 +1,4 @@
-package main
+package test
 
 import (
 	"fmt"
@@ -7,13 +7,13 @@ import (
 	"syscall"
 )
 
-// go run main.go run <cmd> <args>
+// go run mainTest2.go run <cmd> <args>
 func main() {
 	switch os.Args[1] {
 	case "run":
 		run()
-	case "child":
-		child()
+	//case "child":
+	//	child()
 	default:
 		panic("help")
 	}
@@ -32,4 +32,10 @@ func run() {
 	}
 
 	must(cmd.Run())
+}
+
+func must(err error) {
+	if err != nil {
+		panic(err)
+	}
 }
