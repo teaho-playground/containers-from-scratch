@@ -11,4 +11,7 @@ func main() {
 	//unshare 是使当前进程加入新的 namespace
 	//clone 是创建一个新的子进程，然后让子进程加入新的 namespace，而当前进程保持不变
 
+	//syscall.CLONE_NEWUTS
+	//syscall.CLONE_NEWPID
+	//syscall.CLONE_NEWNS
 }
