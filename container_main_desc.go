@@ -64,7 +64,8 @@ func child() {
 	must(syscall.Chroot("/home/teaho/ubuntufs/"))
 	must(os.Chdir("/"))
 	must(syscall.Mount("proc", "proc", "proc", 0, ""))
-	must(syscall.Mount("thing", "mytemp", "tmpfs", 0, ""))
+	//must(syscall.Mount("thing", "mytemp", "tmpfs", 0, ""))
+	must(syscall.Mount("usr", "mytemp", "tmpfs", 0, ""))
 
 	must(cmd.Run())
 
