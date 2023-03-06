@@ -65,7 +65,7 @@ func child() {
 	must(os.Chdir("/"))
 	must(syscall.Mount("proc", "proc", "proc", 0, ""))
 	//must(syscall.Mount("thing", "mytemp", "tmpfs", 0, ""))
-	must(syscall.Mount("usr", "mytemp", "tmpfs", 0, ""))
+	must(syscall.Mount("tmp", "mytemp", "tmpfs", 0, "size=100M,mode=0755"))
 
 	must(cmd.Run())
 
