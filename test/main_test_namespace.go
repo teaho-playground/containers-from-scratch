@@ -12,6 +12,7 @@ func main() {
 	//clone 是创建一个新的子进程，然后让子进程加入新的 namespace，而当前进程保持不变
 
 	//分类	系统调用参数
+	//cgroup
 	//Mount namespaces	CLONE_NEWNS
 	//UTS namespaces	CLONE_NEWUTS
 	//IPC namespaces	CLONE_NEWIPC
